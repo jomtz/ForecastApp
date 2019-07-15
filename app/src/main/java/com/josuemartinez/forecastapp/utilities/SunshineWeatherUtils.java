@@ -19,7 +19,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.josuemartinez.forecastapp.R;
-import com.example.android.sunshine.data.SunshinePreferences;
+import com.josuemartinez.forecastapp.data.SunshinePreferences;
 
 /**
  * Contains useful utilities for a weather app, such as conversion between Celsius and Fahrenheit,
