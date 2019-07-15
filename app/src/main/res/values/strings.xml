@@ -2,6 +2,8 @@
 
     <string name="app_name">Forecast</string>
 
+    <!--Used in overflow menu to refresh weather data-->
+    <string name="action_refresh">Refresh</string>
 
     <!-- - - - - - - - - - - - - -->
     <!--Used by SunshineDateUtils-->
