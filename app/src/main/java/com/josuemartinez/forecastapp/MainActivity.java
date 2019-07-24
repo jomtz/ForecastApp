@@ -1,6 +1,7 @@
 package com.josuemartinez.forecastapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.josuemartinez.forecastapp.ForecastAdapter.ForecastAdapterOnClickHandler;
 import com.josuemartinez.forecastapp.data.SunshinePreferences;
@@ -107,8 +107,20 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
     @Override
     public void onClick(String weatherForDay) {
         Context context = this;
-        Toast.makeText(context, weatherForDay, Toast.LENGTH_SHORT)
-                .show();
+        /* This is the class that we want to start (and open) when the button is clicked. */
+        Class destinationClass = DetailActivity.class;
+        /*
+         * Here, we create the Intent that will start the Activity we specified above in
+         * the destinationActivity variable. The constructor for an Intent also requires a
+         * context, which we stored in the variable named "context".
+         */
+        Intent intentToStartDetailActivity = new Intent(context, destinationClass);
+        /*
+         * Once the Intent has been created, we can use Activity's method, "startActivity"
+         * to start the DetailActivity.
+         */
+        intentToStartDetailActivity.putExtra(Intent.EXTRA_TEXT, weatherForDay);
+        startActivity(intentToStartDetailActivity);
     }
 
 
