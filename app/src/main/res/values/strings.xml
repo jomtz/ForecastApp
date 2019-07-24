@@ -2,6 +2,10 @@
 
     <string name="app_name">Forecast</string>
 
+    <string name="action_map">Map Location</string>
+    <string name="action_share">Share</string>
+
+
     <!--Used in overflow menu to refresh weather data-->
     <string name="action_refresh">Refresh</string>
 
