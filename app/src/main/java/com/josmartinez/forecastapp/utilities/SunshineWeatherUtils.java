@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.josuemartinez.forecastapp.utilities;
+package com.josmartinez.forecastapp.utilities;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.josuemartinez.forecastapp.R;
-import com.josuemartinez.forecastapp.data.SunshinePreferences;
+import com.josmartinez.forecastapp.R;
+import com.josmartinez.forecastapp.data.SunshinePreferences;
 
 /**
  * Contains useful utilities for a weather app, such as conversion between Celsius and Fahrenheit,

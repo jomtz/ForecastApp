@@ -1,4 +1,4 @@
-package com.josuemartinez.forecastapp;
+package com.josmartinez.forecastapp;
 
 import org.junit.Test;
 

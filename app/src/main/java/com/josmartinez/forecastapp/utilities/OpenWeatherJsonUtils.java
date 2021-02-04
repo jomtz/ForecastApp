@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.josuemartinez.forecastapp.utilities;
+package com.josmartinez.forecastapp.utilities;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -87,8 +87,8 @@ public final class OpenWeatherJsonUtils {
         parsedWeatherData = new String[weatherArray.length()];
 
         long localDate = System.currentTimeMillis();
-        long utcDate = com.josuemartinez.forecastapp.utilities.SunshineDateUtils.getUTCDateFromLocal(localDate);
-        long startDay = com.josuemartinez.forecastapp.utilities.SunshineDateUtils.normalizeDate(utcDate);
+        long utcDate = com.josmartinez.forecastapp.utilities.SunshineDateUtils.getUTCDateFromLocal(localDate);
+        long startDay = com.josmartinez.forecastapp.utilities.SunshineDateUtils.normalizeDate(utcDate);
 
         for (int i = 0; i < weatherArray.length(); i++) {
             String date;
@@ -107,8 +107,8 @@ public final class OpenWeatherJsonUtils {
              * We ignore all the datetime values embedded in the JSON and assume that
              * the values are returned in-order by day (which is not guaranteed to be correct).
              */
-            dateTimeMillis = startDay + com.josuemartinez.forecastapp.utilities.SunshineDateUtils.DAY_IN_MILLIS * i;
-            date = com.josuemartinez.forecastapp.utilities.SunshineDateUtils.getFriendlyDateString(context, dateTimeMillis, false);
+            dateTimeMillis = startDay + com.josmartinez.forecastapp.utilities.SunshineDateUtils.DAY_IN_MILLIS * i;
+            date = com.josmartinez.forecastapp.utilities.SunshineDateUtils.getFriendlyDateString(context, dateTimeMillis, false);
 
             /*
              * Description is in a child array called "weather", which is 1 element long.
@@ -128,7 +128,7 @@ public final class OpenWeatherJsonUtils {
             JSONObject temperatureObject = dayForecast.getJSONObject(OWM_TEMPERATURE);
             high = temperatureObject.getDouble(OWM_MAX);
             low = temperatureObject.getDouble(OWM_MIN);
-            highAndLow = com.josuemartinez.forecastapp.utilities.SunshineWeatherUtils.formatHighLows(context, high, low);
+            highAndLow = com.josmartinez.forecastapp.utilities.SunshineWeatherUtils.formatHighLows(context, high, low);
 
             parsedWeatherData[i] = date + " - " + description + " - " + highAndLow;
         }

@@ -1,4 +1,4 @@
-package com.josuemartinez.forecastapp;
+package com.josmartinez.forecastapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

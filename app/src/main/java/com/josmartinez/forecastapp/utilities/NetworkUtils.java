@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.josuemartinez.forecastapp.utilities;
+package com.josmartinez.forecastapp.utilities;
 
 import android.net.Uri;
 import android.util.Log;

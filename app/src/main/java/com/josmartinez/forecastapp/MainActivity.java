@@ -1,13 +1,10 @@
-package com.josuemartinez.forecastapp;
+package com.josmartinez.forecastapp;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,10 +13,14 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.josuemartinez.forecastapp.ForecastAdapter.ForecastAdapterOnClickHandler;
-import com.josuemartinez.forecastapp.data.SunshinePreferences;
-import com.josuemartinez.forecastapp.utilities.NetworkUtils;
-import com.josuemartinez.forecastapp.utilities.OpenWeatherJsonUtils;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.josmartinez.forecastapp.ForecastAdapter.ForecastAdapterOnClickHandler;
+import com.josmartinez.forecastapp.data.SunshinePreferences;
+import com.josmartinez.forecastapp.utilities.NetworkUtils;
+import com.josmartinez.forecastapp.utilities.OpenWeatherJsonUtils;
 
 import java.net.URL;
 
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         mErrorMessageDisplay.setVisibility(View.VISIBLE);
     }
 
-    public class FetchWeatherTask extends AsyncTask<String, Void, String[]>{
+    public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
         @Override
         protected void onPreExecute() {
